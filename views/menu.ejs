@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ala Orden Menu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Holtwood+One+SC"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <title>Menu</title>
+      </head>
+        <div class="container site">
+          <h1 class="text-logo">
+            <span class="glyphicon glyphicon-cutlery"></span>Ala Orden<span
+              class="glyphicon glyphicon-cutlery"
+            ></span>
+          </h1>
+​
+          <div class="tab-content">
+            <div class="tab-pane active" id="1">
+              <div class="row">
+                <div id="menu">
+​
+            <% for(var i=0; i<menu.length; i++) {%>
+                  <div class="col-sm-6 col-md-4">
+                    <div class="menu menuName0 thumbnail" id="<%=menu[i]._id%>">
+                      <h3><%= menu[i].food%></h3>
+                      <img
+                        src="<%=menu[i].src%>"
+                        class="img-responsive" 
+                        style="width:350px;
+                        height: 210px;"
+                      />
+                      <h1><%=i%></h1>
+                      <h4 class="price">$<%= menu[i].cost%></h4>
+                      <button class="btn-order order">
+                        <glyphicon
+                          class="glyphicon glyphicon-shopping-cart"
+                        ></glyphicon>
+                        order
+                      </button>
+                    </div>
+                  </div>
+             <% } %>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content">
+            <h1>YOUR CART</h1>
+            <div class="tab-pane active" id="1">
+              <div class="row">
+                <div id="menu">
+​
+            <% for(var i=0; i<orders.length; i++) {%>
+                  <div class="col-sm-6 col-md-4"
+                  >
+                    <div class="menu menuName0 thumbnail" id="<%=orders[i]._id%>">
+                      <h3 <%= orders[i].paid ?  'class=paid' : 'class= notPaid' %>><%= orders[i].food%></h3>
+                      <h1>1</h1>
+                      <h4 class="price"><%= orders[i].cost%></h4>
+                      <button  class="btn-order pay" >
+                        <glyphicon
+                          class="glyphicon glyphicon-shopping-cart"
+                        ></glyphicon>
+                        pay
+                      </button>
+                      <button  class="btn-order delete" >
+                        <glyphicon
+                          class="glyphicon glyphicon-shopping-cart"
+                        ></glyphicon>
+                        delete
+                      </button>
+                    </div>
+                  </div>
+             <% } %>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+​
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/41069aef2b.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>
