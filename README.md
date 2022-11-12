@@ -1,5 +1,8 @@
 ## Installation
 
+<img width="1709" alt="Screen Shot 2022-11-12 at 12 04 14 AM" src="https://user-images.githubusercontent.com/113155959/201458127-0700bc5d-72ab-4eee-b196-4de856dcb671.png">
+
+
 1. Clone repo
 2. run `npm install`
 
