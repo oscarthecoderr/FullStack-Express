@@ -14,3 +14,7 @@
 ## Credit
 
 Modified from Scotch.io's auth tutorial
+
+hey y'all!! 
+this is called a la Orden! a peruvian restaurant app where you can order the best dishes that one can dream of ! 
+A full stack app thats built with html, css, js and node.js ! very fun to make. Order a dish before you leave! 
